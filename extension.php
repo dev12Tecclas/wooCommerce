@@ -6,6 +6,6 @@
  * Author: Tu Nombre
  */
 $salida = shell_exec('node /prueba.js')
-// echo $salida
+echo $salida
 
 ?>
