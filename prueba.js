@@ -1,1 +1,4 @@
-alert('prueba')
+window.alert('prueba')
+
+
+console.log('prueba')
