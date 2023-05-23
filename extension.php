@@ -5,7 +5,42 @@
  * Version: 1.0.0
  * Author: Tu Nombre
  */
-$salida = shell_exec('node /prueba.js')
-echo $salida
+// $salida = shell_exec('node /prueba.js')
+// echo $salida
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'http://localhost:4000/algos',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+    "nombre":"lolo"
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+// print '<h1>hola</h1>';
+
+// // $woocommerceURL = get_site_url();
+
+// // Obtener las consultas (query)
+// $queryString = $_SERVER['REQUEST_URI'];
+
+// // Imprimir la URL de inicio y las consultas
+// // echo "URL de inicio de WooCommerce: " . $woocommerceURL . "<br>";
+// echo "Consultas: " . $queryString;
+
 
 ?>

@@ -25,7 +25,12 @@ app.get('/productos', (req, res) => {
     // });
   });
 
+  app.post('/algos', (req, res)=> {
+    console.log(req.body);
+    res.send('ok')
+  })
 
-app.listen( 3000 , ()=> {
+
+app.listen( 4000 , ()=> {
     console.log( ' listening on http://localhost:3000')
 })
