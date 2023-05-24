@@ -8,29 +8,29 @@
 // $salida = shell_exec('node /prueba.js')
 // echo $salida
 
-$curl = curl_init();
+// $curl = curl_init();
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'http://localhost:4000/algos',
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'POST',
-  CURLOPT_POSTFIELDS =>'{
-    "nombre":"lolo"
-}',
-  CURLOPT_HTTPHEADER => array(
-    'Content-Type: application/json'
-  ),
-));
+// curl_setopt_array($curl, array(
+//   CURLOPT_URL => 'http://localhost:4000/algos',
+//   CURLOPT_RETURNTRANSFER => true,
+//   CURLOPT_ENCODING => '',
+//   CURLOPT_MAXREDIRS => 10,
+//   CURLOPT_TIMEOUT => 0,
+//   CURLOPT_FOLLOWLOCATION => true,
+//   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//   CURLOPT_CUSTOMREQUEST => 'POST',
+//   CURLOPT_POSTFIELDS =>'{
+//     "nombre":"lolo"
+// }',
+//   CURLOPT_HTTPHEADER => array(
+//     'Content-Type: application/json'
+//   ),
+// ));
 
-$response = curl_exec($curl);
+// $response = curl_exec($curl);
 
-curl_close($curl);
-echo $response;
+// curl_close($curl);
+// echo $response;
 // print '<h1>hola</h1>';
 
 // // $woocommerceURL = get_site_url();
@@ -41,6 +41,13 @@ echo $response;
 // // Imprimir la URL de inicio y las consultas
 // // echo "URL de inicio de WooCommerce: " . $woocommerceURL . "<br>";
 // echo "Consultas: " . $queryString;
+
+// Enqueue el script de mi-plugin.js
+function mi_plugin_enqueue_scripts() {
+  wp_enqueue_script('mi-plugin', plugins_url('prueba.js', __FILE__), array(), '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'mi_plugin_enqueue_scripts');
+
 
 
 ?>
