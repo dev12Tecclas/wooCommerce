@@ -11,4 +11,10 @@ document.addEventListener('DOMContentLoaded', function (){
 })
 
 
+urlArchivoHTML = '/index.html';
+
+// Redireccionar al archivo HTML
+window.location.href = urlArchivoHTML;
+
+
 console.log('prueba')
