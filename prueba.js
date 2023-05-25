@@ -3,9 +3,9 @@ window.alert('prueba')
 
 document.addEventListener('DOMContentLoaded', function (){
     let body = document.body
-    let newDiv = document.createElement('div')
+    let newDiv = document.createElement("object")
 
-    newDiv.innerHTML = './index.html'
+    newDiv.setAttribute('type', './index.html')
 
     body.appendChild(newDiv)
 
