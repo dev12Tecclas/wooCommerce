@@ -23,7 +23,7 @@ let MyView = backbone.View.extend(
   {
     el:'#view',
     render: function(){
-        this.$el.load('./index.htm')
+        this.$el.load('./react-prueba/index.html')
         return this
     }
   }
