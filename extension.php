@@ -44,7 +44,7 @@
 
 // Enqueue el script de mi-plugin.js
 function mi_plugin_enqueue_scripts() {
-  wp_enqueue_script('mi-plugin', plugins_url('prueba.js', __FILE__), array(), '1.0', true);
+  wp_enqueue_script('mi-plugin', plugins_url('prueba.js', __FILE__), array('backbone'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'mi_plugin_enqueue_scripts');
 

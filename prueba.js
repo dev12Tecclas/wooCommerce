@@ -3,15 +3,15 @@ const backbone = require('backbone')
 // window.alert('prueba')
 
 
-document.addEventListener('DOMContentLoaded', function (){
-    let body = document.body
-    let newDiv = document.createElement("iframe")
+// document.addEventListener('DOMContentLoaded', function (){
+//     let body = document.body
+//     let newDiv = document.createElement("iframe")
 
-    newDiv.setAttribute('src', './index.html')
+//     newDiv.setAttribute('src', './index.html')
 
-    body.appendChild(newDiv)
+//     body.appendChild(newDiv)
 
-})
+// })
 
 
 // urlArchivoHTML = '/index.html';
@@ -23,7 +23,7 @@ let MyView = backbone.View.extend(
   {
     el:'#view',
     render: function(){
-        this.$el.load('./react-prueba/index.html')
+        this.$el.load('./index.html')
         return this
     }
   }
