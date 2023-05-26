@@ -64,11 +64,19 @@
  */
 
 // Registra los scripts y estilos necesarios para tu aplicación de React
+function mi_id_react () {
+  wp_enqueue_script('insertar-id', plugin_dir_url( __FILE__ ) . 'prueba.js', array(), '1.0.0', true )
+}
+
 function mi_complemento_enqueue_scripts() {
     // Registra el archivo JavaScript compilado de tu aplicación de React
-    wp_enqueue_script( 'mi-complemento-react', plugin_dir_url( __FILE__ ) . './react-prueba/dist/assets/index-640d5fac.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'mi-complemento-react', plugin_dir_url( __FILE__ ) . './react-prueba/dist/assets/index-b7f8c37b.js', array(), '1.0.0', true );
 
     // Registra los estilos CSS de tu aplicación de React
     wp_enqueue_style( 'mi-complemento-react', plugin_dir_url( __FILE__ ) . './react-prueba/dist/assets/index-d526a0c5.css', array(), '1.0.0' );
 }
+
+
+
+add_action( 'wp_enqueue_scripts', 'mi_id_react' );
 add_action( 'wp_enqueue_scripts', 'mi_complemento_enqueue_scripts' );
