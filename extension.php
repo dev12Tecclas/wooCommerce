@@ -65,7 +65,7 @@
 
 // Registra los scripts y estilos necesarios para tu aplicación de React
 function mi_id_react () {
-  wp_enqueue_script('insertar-id', plugin_dir_url( __FILE__ ) . 'prueba.js', array(), '1.0.0', true )
+  wp_enqueue_script('insertar-id', plugin_dir_url( __FILE__ ) . 'prueba.js', array(), '1.0.0', true );
 }
 
 function mi_complemento_enqueue_scripts() {
