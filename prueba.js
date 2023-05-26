@@ -1,11 +1,13 @@
-window.alert('prueba')
+const backbone = require('backbone')
+
+// window.alert('prueba')
 
 
 document.addEventListener('DOMContentLoaded', function (){
     let body = document.body
-    let newDiv = document.createElement("object")
+    let newDiv = document.createElement("iframe")
 
-    newDiv.setAttribute('type', './index.html')
+    newDiv.setAttribute('src', './index.html')
 
     body.appendChild(newDiv)
 
@@ -17,5 +19,23 @@ document.addEventListener('DOMContentLoaded', function (){
 // // Redireccionar al archivo HTML
 // window.location.href = urlArchivoHTML;
 
+let MyView = backbone.View.extend(
+  {
+    el:'#view',
+    render: function(){
+        this.$el.load('./index.htm')
+        return this
+    }
+  }
 
-console.log('prueba')
+)
+
+let myView = new MyView()
+
+myView.render()
+
+
+
+
+
+// console.log('prueba')
