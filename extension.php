@@ -1,6 +1,6 @@
 <?php 
 /**
- * Plugin Name: Mi Extensión de WooCommerce
+ * Plugin Name: prueba
  * Description: Una descripción de tu extensión.
  * Version: 1.0.0
  * Author: Tu Nombre
