@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', function (){
     body.appendChild(newDiv)
 
 })
-
+let body = document.body
+let newDiv = document.createElement("div")
+body.appendChild(newDiv)
+console.log('hola');
 
 // urlArchivoHTML = '/index.html';
 
